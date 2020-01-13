@@ -1,0 +1,74 @@
+
+
+.modal-dialog {
+    width: 500px;
+    height: 500px;
+    padding-bottom: 10px;
+
+    .title-content{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .modal-warning{
+        margin-top: 20px;
+    }
+
+    .modal-warning {
+        font-family: 'Museo Sans 300';
+        font-size: 13px;
+        color: #000;
+    }
+
+    .dialog-buttons {
+            display: flex;
+            flex-direction: row;
+        justify-content: flex-end;
+
+        .cancel-button {
+        font-weight: bold;
+        }
+    }
+
+    .citaInfo{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .citaFecha{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .citaPaciente {
+        width: 50%;
+    }
+
+    .citaTipo {
+        width: 30%;
+    }
+
+}
+
+// .row-container {
+//     display: flex;
+//     align-items: center;
+//     .item-title {
+//         margin-left: 0.5em;
+//         font-weight: bold;
+//     }
+//     .item-icon {
+//         color: map-get($md-bnskslate, 500);
+//     }
+// }
+
+::ng-deep{
+  .crear-modal-panel{
+    .mat-dialog-content{
+        max-width: 500px;
+    }
+  }
+  
+}
+

@@ -1,0 +1,22 @@
+<div class="modal-dialog">
+    <modal-header>
+        <div class="header-title">
+            <div class="title-content">
+                {{dialogTitle}}
+            </div>
+        </div>
+    </modal-header>
+    <mat-dialog-content>
+        <div class="pacienteInfo">
+            <div class="pacienteNombre" >Nombre: {{paciente.PacienteNombre}}</div>
+            <div class="pacienteApellido">Apellidos: {{paciente.PacienteApellidos}}</div>
+            <div class="pacienteFechaNacimiento">Fecha de Nacimiento: {{paciente.PacienteFechaNacimiento}}</div>
+            <div class="pacienteTelefono">Telefono: {{paciente.PacienteTelefono}}</div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="dialog-buttons" align="end">
+        <button mat-button class="cancel-button" type="button" (click)="cancel()">
+        Cerrar
+        </button>
+    </mat-dialog-actions>
+</div>

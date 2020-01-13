@@ -1,0 +1,32 @@
+<div class="modal-dialog">
+    <modal-header>
+        <div class="header-title">
+            <div class="title-content">
+                {{dialogTitle}}
+            </div>
+        </div>
+    </modal-header>
+    <mat-dialog-content>
+        <div class="citaInfo">
+            <input class="citaFecha" type="datetime-local" [(ngModel)] = "citaFecha" required>
+            <mat-select class="citaPaciente" placeholder="Paciente" (selectionChange)="onSelectChange($event.value)">
+                <mat-option *ngFor = "let paciente of pacientes" [value] ="paciente">
+                    <span>{{getPacienteFullName(paciente)}}</span>
+                </mat-option>
+            </mat-select>
+            <mat-select class="citaTipo" placeholder="Tipo" (selectionChange)="onSelectChangeTipo($event.value)">
+                <mat-option *ngFor = "let tipo of tiposCitas" [value] = "tipo">
+                    <span>{{tipo.TiposCitaDescripcion}}</span>
+                </mat-option>
+            </mat-select>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="dialog-buttons" align="end">
+        <button mat-button class="cancel-button" type="button" (click)="cancel()">
+        Cancelar
+        </button>
+        <button mat-raised-button color="primary" class="apply-button"  type="button" (click)="submit()">
+        Guardar
+        </button>
+    </mat-dialog-actions>
+</div>
